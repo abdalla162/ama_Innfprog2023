@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deleksamen 1 - finn feilene</title>
+        <!-- CSS-stiler. Dette skal ikke endres -->
+        <style>
+            
+        div#mainframe {
+            background-color: #b61010;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        div#background {
+            width: 80vw;
+            height: 80vh;
+            background-size: cover;
+            background-image: url('start-cat.jpg');
+            background-color: #232323;
+            background-position: center center;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="mainframe">
+            <div id="background"></div>
+        </div>
+        <!-- 
+	JavaScript. Her finnes 10 feil som må rettes for at det riktige bildet skal vises.
+        PS: Du skal ikke skrive om koden, kun rette den opp der du finner feil.
+        Kommenter hver feil du finner! 
+    -->
+    <script>
+        
+        const examtype = "error";  // Manglet anførselstegn og punktumkomma
+        const studenttype = "hero"  // Var en en kolon, skal være =
+
+        const maxScore = 1337;
+        let currentScore = 330;  // isteden for const så burde det være let
+
+        const addedScore = currentScore * 4;   //ikke kolon men punktumkomma, også var det en ekstra =
+        const missingMaxScore = "17";
+        currentScore = addedcore + missingMaxScore;
+
+        const green = "0, 128, 0";
+
+    
+        if (maxScore == 1337) {
+            successImage = `${examtype}-${studenttype}` ;  //Lo til punktum komma tl slutt også trengs ikke const foran sucessimage. 
+        }  //Også skal det være dollartegn foran studenttype hvis det er foran examtype. Lo til dollartegnet.
+
+    
+        if (currentScore === maxScore) {
+            document.getElementById("background").style.backgroundImage = "url(" + successImage + ".jpg)";
+            document.getElementById("mainframe").style.backgroundColor = "rgb(" + green + ")";
+        }
+        
+        // Var en ekstra = ved currentscore, også var det en } helt nederst der det skulle være det samme oppe, også etter mainframe skal det være punktum.
+        // også document.getElementById istedetnfor IDE, også green istedenfor greeen siste delen.
+    
+    </script>
+    </body>
+</html>
